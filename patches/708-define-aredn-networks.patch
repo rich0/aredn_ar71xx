@@ -69,9 +69,9 @@ Index: openwrt/target/linux/ar71xx/base-files/etc/board.d/02_network
  	wndap360|\
  	wp543)
 -		ucidef_set_interface_lan "eth0"
-+		ucidef_set_interfaces_lan_wan "eth0" "eth0.1"
-+		ucidef_set_interface "wifi" ifname "wlan0" protocol "static"
-+		ucidef_set_interface "dtdlink" ifname "eth0.2" protocol "static"
++		ucidef_set_interfaces_lan_wan "eth0" "eth0.5"
++		ucidef_set_interface_raw "wifi" "wlan0" "static"
++		ucidef_set_interface_raw "dtdlink" "eth0.2" "static"
  		;;
  	a40|\
  	a60|\
@@ -89,9 +89,9 @@ Index: openwrt/target/linux/ar71xx/base-files/etc/board.d/02_network
  	rocket-m-ti|\
  	ubnt-unifi-outdoor)
 -		ucidef_set_interface_lan "eth0 eth1"
-+		ucidef_set_interfaces_lan_wan "eth0" "eth0.1"
-+		ucidef_set_interface "wifi" ifname "wlan0" protocol "static"
-+		ucidef_set_interface "dtdlink" ifname "eth0.2" protocol "static"
++		ucidef_set_interfaces_lan_wan "eth0" "eth0.5"
++		ucidef_set_interface_raw "wifi" "wlan0" "static"
++		ucidef_set_interface_raw "dtdlink" "eth0.2" "static"
  		;;
  	wzr-hp-g300nh2)
  		ucidef_add_switch "switch0" \
@@ -176,15 +176,15 @@ Index: openwrt/target/linux/ar71xx/base-files/etc/board.d/02_network
  		;;
 +	nanostation-m)
 +		ucidef_set_interface_lan "eth0 eth1"
-+		ucidef_set_interface_wan "eth0.1 eth1.1"
-+		ucidef_set_interface "dtdlink" ifname "eth0.2 eth1.2" protocol "static"
-+		ucidef_set_interface "wifi" ifname "wlan0" protocol "static"
++		ucidef_set_interface_wan "eth0.5 eth1.5"
++		ucidef_set_interface_raw "dtdlink" "eth0.2 eth1.2" "static"
++		ucidef_set_interface_raw "wifi" "wlan0" "static"
 +		;;
  	*)
 -		ucidef_set_interfaces_lan_wan "eth0" "eth1"
-+		ucidef_set_interface "wifi" ifname "wlan0" protocol "static"
-+		ucidef_set_interfaces_lan_wan "eth0" "eth0.1"
-+		ucidef_set_interface "dtdlink" ifname "eth0.2" protocol "static"
++		ucidef_set_interface_raw "wifi" "wlan0" "static"
++		ucidef_set_interfaces_lan_wan "eth0" "eth0.5"
++		ucidef_set_interface_raw "dtdlink" "eth0.2" "static"
  		;;
  	esac
  }

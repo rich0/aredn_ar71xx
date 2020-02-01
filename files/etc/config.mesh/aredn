@@ -1,5 +1,5 @@
 config downloads
-        option firmwarepath 'http://downloads.arednmesh.org/firmware'
+        option firmwarepath 'http://s3.amazonaws.com/thefreemanclan.net-publish/aredn/ubnt'
 
 config poe
 		option passthrough '0'
