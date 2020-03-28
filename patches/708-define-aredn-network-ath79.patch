@@ -15,7 +15,7 @@ Index: openwrt/target/linux/ath79/base-files/etc/board.d/02_network
  	wd,mynet-wifi-rangeextender|\
  	winchannel,wb2000)
 -		ucidef_set_interface_lan "eth0"
-+		ucidef_set_interfaces_lan_wan "eth0" "eth0.1"
++		ucidef_set_interfaces_lan_wan "eth0" "eth0.5"
 +		ucidef_set_interface "wifi" ifname "wlan0" protocol "static"
 +		ucidef_set_interface "dtdlink" ifname "eth0.2" protocol "static"
  		;;
@@ -38,7 +38,7 @@ Index: openwrt/target/linux/ath79/base-files/etc/board.d/02_network
  	ubnt,routerstation)
 -		ucidef_set_interfaces_lan_wan "eth1" "eth0"
 +		ucidef_set_interface_lan "eth0 eth1"
-+		ucidef_set_interface_wan "eth0.1 eth1.1"
++		ucidef_set_interface_wan "eth0.5 eth1.5"
 +		ucidef_set_interface "dtdlink" ifname "eth0.2 eth1.2" protocol "static"
 +		ucidef_set_interface "wifi" ifname "wlan0" protocol "static"
  		;;
@@ -66,7 +66,7 @@ Index: openwrt/target/linux/ath79/base-files/etc/board.d/02_network
  	*)
 -		ucidef_set_interfaces_lan_wan "eth0" "eth1"
 +		ucidef_set_interface "wifi" ifname "wlan0" protocol "static"
-+		ucidef_set_interfaces_lan_wan "eth0" "eth0.1"
++		ucidef_set_interfaces_lan_wan "eth0" "eth0.5"
 +		ucidef_set_interface "dtdlink" ifname "eth0.2" protocol "static"
  		;;
  	esac
