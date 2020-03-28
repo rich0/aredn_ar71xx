@@ -66,7 +66,7 @@ push @setting, {
   key => "aredn.\@downloads[0].firmwarepath", 
   type => "string", 
   desc => "Specifies the URL of the location from which firmware files will be downloaded.", 
-  default => "https://s3.amazonaws.com/thefreemanclan.net-publish/aredn/ubnt"
+  default => "http://s3.amazonaws.com/thefreemanclan.net-publish/aredn/ubnt"
 };
 push @setting, {
   key => "aredn.\@poe[0].passthrough", 
